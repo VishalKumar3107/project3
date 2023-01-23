@@ -1,4 +1,5 @@
- #secure;
+class API { 
+#secure;
         constructor(url, method = 'GET') {
           this.url = url;
           this.method = method;
