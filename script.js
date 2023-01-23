@@ -1,11 +1,13 @@
-class API {
+ class API {
         #secure;
         constructor(url, method = 'GET') {
           this.url = url;
           this.method = method;
           this.#secure = url.startsWith('https') ? true : false;
         }
-  
+        get secure(){
+          return this.#secure;
+        }
         isSecure() {
           return this.#secure;
         }
@@ -23,5 +25,5 @@ class API {
         console.log(s.isSecure()); // true
         console.log(s.url); // https://api.com/api/hello
         console.log(s.method); // GET
-        console.log(s.#secure); // undefined (because private field)
+        console.log(s.secure); // undefined (because private field)
       });
